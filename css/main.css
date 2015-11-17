@@ -71,6 +71,10 @@ form {
   padding: 2em 0;
 }
 
+button:focus {
+  outline: none;
+}
+
 #results-section p {
   width: 50%;
   margin: 0 auto;
