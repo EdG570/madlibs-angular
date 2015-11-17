@@ -34,8 +34,9 @@ header {
 #create-section > h2 {
   font-weight: 300;
   font-size: 2em;
-  width: 72%;
+  width: 52.5%;
   margin: 0 auto;
+  margin-bottom: 0.5em;
 }
 
 input:focus {
@@ -43,7 +44,7 @@ input:focus {
 }
 
 form {
-  width: 75%;
+  width: 55%;
   margin: 0 auto;
 }
 
@@ -58,8 +59,22 @@ form {
   border: none;
   background-color: #dd2255;
   color: #fff;
+  margin-top: 1em;
 }
 
 #create-section input[type="submit"]:hover {
   background-color: #ee3366;
+}
+
+#results-section {
+  border: 1px solid #333;
+  padding: 2em 0;
+}
+
+#results-section p {
+  width: 50%;
+  margin: 0 auto;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  font-size: 1.2em;
 }
