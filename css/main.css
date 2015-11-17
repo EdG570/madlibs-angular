@@ -52,7 +52,7 @@ form {
   margin: 1em;
 }
 
-#create-section input[type="submit"] {
+#create-section button {
   display: block;
   margin: 0 auto;
   padding: 0.5em 2em;
@@ -62,7 +62,7 @@ form {
   margin-top: 1em;
 }
 
-#create-section input[type="submit"]:hover {
+#create-section button:hover {
   background-color: #ee3366;
 }
 
