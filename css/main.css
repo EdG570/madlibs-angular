@@ -77,7 +77,8 @@ label[for="female"] {
   top: 2.8em;
 }
 
-#create-section button {
+input[type="submit"],
+button {
   display: block;
   margin: 0 auto;
   padding: 0.5em 2em;
@@ -115,4 +116,13 @@ span {
 .blank {
   border-bottom: 1px solid #333;
   width: 100px;
+}
+
+.error {
+  color: red;
+  letter-spacing: 1px;
+}
+
+#error {
+  text-align: center;
 }

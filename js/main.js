@@ -1,6 +1,6 @@
 (function(){
 
-  var app = angular.module('mad', []);
+  var app = angular.module('mad', ['ngMessages']);
 
     app.controller('WordController', [ '$scope', '$timeout', function($scope, $timeout){
       $scope.gender = 'm';
@@ -14,8 +14,22 @@
         }
       };
 
+      $scope.validated = false;
+
+
+      $scope.submit = function() {
+        if($scope.myForm.$valid) {
+          console.log("The form is valid!");
+          $scope.validated = true;
+        }
+        else {
+          console.log("The form is invalid");
+        }
+      };
+
 
       $scope.clearInput = function() {
+        $scope.validated = false;
         $scope.femaleName = '';
         $scope.jobTitle = '';
         $scope.tediousTask = '';
