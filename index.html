@@ -23,28 +23,29 @@
         </header>
         <section class="container">
             <div id="create-section">
+                <div>{{ wait }}</div>
                 <h2>Provide the following words:</h2>
             
                 <form>
-                    <input type="text" placeholder="Female name" ng-model="femaleName" ng-click="word.setGender()">
+                    <input type="text" placeholder="Female name" ng-model="femaleName" ng-click="setGender()">
                     <input type="text" placeholder="Job title" ng-model="jobTitle">
                     <input type="text" placeholder="Tedious task" ng-model="tediousTask">
                     <input type="text" placeholder="Dirty task" ng-model="dirtyTask">
                     <input type="text" placeholder="celebrity" ng-model="celebrity">
                     <input type="text" placeholder="Useless skill" ng-model="uselessSkill">
                     <input type="text" placeholder="Adjective" ng-model="adjective">
-                    <input type="text" placeholder="Abnoxious celebrity" ng-model="abnoxiousCelebrity">
+                    <input type="text" placeholder="Obnoxious celebrity" ng-model="obnoxiousCelebrity">
                     <input type="text" placeholder="Huge number" ng-model="hugeNumber"> 
                 </form>
 
-                <button>Restart</button>
+                <button ng-click="clearInput()">Restart</button>
             </div>
 
         
             <div id="results-section">
-                <p>{{femaleName || '_______'}} was a {{jobTitle || '_______'}} who loved technology. Although {{word.gender === 'm'?'he': 'she'}} loved parts of {{word.gender === 'm'?'his': 'her'}} job, {{word.gender === 'm'?'he': 'she'}} absolutely hated  {{tediousTask || '_______'}} and {{dirtyTask || '_______'}}. So, {{femaleName || '_______'}} met with {{word.gender === 'm'?'his': 'her'}} life mentor {{celebrity || '_______'}} who told {{word.gender === 'm'?'him': 'her'}} to learn how to {{uselessSkill || '_______'}} with Thinkful. Thinkful didn't offer a course on {{uselessSkill || '_______'}} so {{word.gender === 'm'?'he': 'she'}} studied programming instead.</p></br>
+                <p>{{ femaleName || '_______' }} was a {{ jobTitle || '_______' }} who loved technology. Although {{ gender === 'm'?'he': 'she' }} loved parts of {{ gender === 'm'?'his': 'her' }} job, {{ gender === 'm'?'he': 'she' }} absolutely hated  {{ tediousTask || '_______' }} and {{ dirtyTask || '_______' }}. So, {{ femaleName || '_______' }} met with {{ gender === 'm'?'his': 'her' }} life mentor {{ celebrity || '_______' }} who told {{ gender === 'm'?'him': 'her' }} to learn how to {{ uselessSkill || '_______' }} with Thinkful. Thinkful didn't offer a course on {{ uselessSkill || '_______' }} so {{ gender === 'm'?'he': 'she' }} studied programming instead.</p></br>
                 
-                <p>What a great decision! With {{word.gender === 'm'?'his': 'her'}} new skills, {{femaleName || '_______'}} built a(n) {{adjective || '_______'}} robot named {{abnoxiousCelebrity || '_______'}} that not only loved {{dirtyTask || '_______'}} but did it {{hugeNumber || '_______'}} times faster. </p>
+                <p>What a great decision! With {{ gender === 'm'?'his': 'her' }} new skills, {{ femaleName || '_______' }} built a(n) {{ adjective || '_______' }} robot named {{ obnoxiousCelebrity || '_______' }} that not only loved {{ dirtyTask || '_______' }} but did it {{ hugeNumber || '_______' }} times faster. </p>
             </div>
         </section>
        

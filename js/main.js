@@ -1,29 +1,29 @@
 (function(){
+
   var app = angular.module('mad', []);
 
-  app.controller('WordController', function(){
-     this.gender = 'm';
+    app.controller('WordController', [ '$scope', '$timeout', function($scope, $timeout){
+      $scope.gender = 'm';
 
-    this.setGender = function(gender) {
-        this.gender = prompt('Is the name male or female? Type m for male and f for female.');
+      $scope.setGender = function() {
+        $scope.gender = prompt('Is the person male or female? Type m for male and f for female.');
+      };
 
-        
-    };
 
-  
+      $scope.clearInput = function() {
+        $scope.femaleName = '';
+        $scope.jobTitle = '';
+        $scope.tediousTask = '';
+        $scope.dirtyTask = '';
+        $scope.celebrity = '';
+        $scope.uselessSkill = '';
+        $scope.adjective = '';
+        $scope.obnoxiousCelebrity = '';
+        $scope.hugeNumber = '';
+      };
 
-  
-
-  });
-
+    }]);
 
 })();
 
 
-
-//Resets input fields
-$(document).ready(function(){
-  $('button').on('click', function(){
-    $('input').val('');
-  });
-});
