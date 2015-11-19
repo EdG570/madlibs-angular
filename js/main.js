@@ -6,7 +6,12 @@
       $scope.gender = 'm';
 
       $scope.setGender = function() {
-        $scope.gender = prompt('Is the person male or female? Type m for male and f for female.');
+        if(document.getElementById('male').checked) {
+          $scope.gender = document.getElementById('male').value;
+        }
+        else if(document.getElementById('female').checked) {
+          $scope.gender = document.getElementById('female').value;
+        }
       };
 
 

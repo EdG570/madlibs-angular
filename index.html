@@ -27,7 +27,11 @@
                 <h2>Provide the following words:</h2>
             
                 <form>
-                    <input type="text" placeholder="Female name" ng-model="femaleName" ng-click="setGender()">
+                    <input type="text" placeholder="Female name" ng-model="femaleName"> 
+                    <input type="radio" name="sex" id="male" value="m" ng-click="setGender()">
+                    <label for = "male">Male</label>
+                    <input type="radio" name="sex" id="female" value="f" ng-click="setGender()">
+                    <label for = "female">Female</label> 
                     <input type="text" placeholder="Job title" ng-model="jobTitle">
                     <input type="text" placeholder="Tedious task" ng-model="tediousTask">
                     <input type="text" placeholder="Dirty task" ng-model="dirtyTask">
@@ -43,9 +47,9 @@
 
         
             <div id="results-section">
-                <p>{{ femaleName || '_______' }} was a {{ jobTitle || '_______' }} who loved technology. Although {{ gender === 'm'?'he': 'she' }} loved parts of {{ gender === 'm'?'his': 'her' }} job, {{ gender === 'm'?'he': 'she' }} absolutely hated  {{ tediousTask || '_______' }} and {{ dirtyTask || '_______' }}. So, {{ femaleName || '_______' }} met with {{ gender === 'm'?'his': 'her' }} life mentor {{ celebrity || '_______' }} who told {{ gender === 'm'?'him': 'her' }} to learn how to {{ uselessSkill || '_______' }} with Thinkful. Thinkful didn't offer a course on {{ uselessSkill || '_______' }} so {{ gender === 'm'?'he': 'she' }} studied programming instead.</p></br>
+                <p><span ng-class="{ blank: !femaleName }">{{ femaleName }}</span> was a <span ng-class="{ blank: !jobTitle }">{{ jobTitle }}</span> who loved technology. Although {{ gender === 'm'?'he': 'she' }} loved parts of {{ gender === 'm'?'his': 'her' }} job, {{ gender === 'm'?'he': 'she' }} absolutely hated <span ng-class="{ blank: !tediousTask }">{{ tediousTask }}</span> and <span ng-class="{ blank: !dirtyTask }">{{ dirtyTask }}</span>. So, <span ng-class="{ blank: !femaleName }">{{ femaleName }}</span> met with {{ gender === 'm'?'his': 'her' }} life mentor <span ng-class="{ blank: !celebrity}">{{ celebrity }}</span> who told {{ gender === 'm'?'him': 'her' }} to learn how to <span ng-class="{ blank: !uselessSkill }">{{ uselessSkill }}</span> with Thinkful. Thinkful didn't offer a course on <span ng-class="{ blank: !uselessSkill }">{{ uselessSkill }}</span> so {{ gender === 'm'?'he': 'she' }} studied programming instead.</p></br>
                 
-                <p>What a great decision! With {{ gender === 'm'?'his': 'her' }} new skills, {{ femaleName || '_______' }} built a(n) {{ adjective || '_______' }} robot named {{ obnoxiousCelebrity || '_______' }} that not only loved {{ dirtyTask || '_______' }} but did it {{ hugeNumber || '_______' }} times faster. </p>
+                <p>What a great decision! With {{ gender === 'm'?'his': 'her' }} new skills, <span ng-class="{ blank: !femaleName }">{{ femaleName }}</span> built a(n) <span ng-class="{ blank: !adjective }">{{ adjective }}</span> robot named <span ng-class="{ blank: !obnoxiousCelebrity }">{{ obnoxiousCelebrity }}</span> that not only loved <span ng-class="{ blank: !dirtyTask }">{{ dirtyTask }}</span> but did it <span ng-class="{ blank: !hugeNumber }">{{ hugeNumber }}</span> times faster. </p>
             </div>
         </section>
        

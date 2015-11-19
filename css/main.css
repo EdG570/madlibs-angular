@@ -46,10 +46,35 @@ input:focus {
 form {
   width: 55%;
   margin: 0 auto;
+  position: relative;
 }
 
 #create-section input[type="text"] {
   margin: 1em;
+}
+
+#create-section input[type="radio"], label {
+  position: absolute;
+}
+
+input[id="male"] {
+  left: 1.8em;
+  top: 2.85em;
+}
+
+input[id="female"] {
+  left: 5.9em;
+  top: 2.85em;
+}
+
+label[for="male"] {
+  left: 3em;
+  top: 2.8em;
+}
+
+label[for="female"] {
+  left: 7em;
+  top: 2.8em;
 }
 
 #create-section button {
@@ -81,4 +106,13 @@ button:focus {
   line-height: 1.8;
   letter-spacing: 1px;
   font-size: 1.2em;
+}
+
+span {
+  display: inline-block; 
+}
+
+.blank {
+  border-bottom: 1px solid #333;
+  width: 100px;
 }
