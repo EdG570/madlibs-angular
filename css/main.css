@@ -88,6 +88,10 @@ button {
   margin-top: 1em;
 }
 
+input[type="number"] {
+  margin-left: 1em;
+}
+
 #create-section button:hover {
   background-color: #ee3366;
 }
