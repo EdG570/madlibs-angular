@@ -99,6 +99,21 @@ input[type="number"] {
 #results-section {
   border: 1px solid #333;
   padding: 2em 0;
+  -webkit-transition: 3s linear all;
+  -ms-transition: 3s linear all;
+  -o-transition: 3s linear all;
+  transition: 3s linear all;
+}
+
+
+#results-section.ng-hide-remove,
+#results-section.ng-hide-add.ng-hide-add-active {
+  opacity: 0;
+}
+
+#results-section.ng-hide-add,
+#results-section.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
 }
 
 button:focus {

@@ -1,6 +1,6 @@
 (function(){
 
-  var app = angular.module('mad', ['ngMessages']);
+  var app = angular.module('mad', ['ngMessages', 'ngAnimate']);
 
     app.controller('WordController', [ '$scope', '$timeout', function($scope, $timeout){
       $scope.gender = 'm';
